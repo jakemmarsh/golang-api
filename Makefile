@@ -12,7 +12,7 @@ dependencies:
 default: test
 
 codeship_install_go:
-	./codeship_install_go.sh
+	source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/go.sh)"
 
 install:
 	go get -t -v ./...
