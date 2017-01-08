@@ -1,11 +1,11 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"github.com/gorilla/mux"
 	"log"
 	"net/http"
+  "encoding/json"
+  "github.com/gorilla/mux"
 	"github.com/jakemmarsh/viral-api/utils"
 )
 

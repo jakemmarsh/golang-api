@@ -2,14 +2,17 @@
 PROGRAM = viral-api
 
 # targets not associated with files
-.PHONY: dependencies default build test coverage clean kill restart serve
+.PHONY: dependencies default codeship_install_go install clean build test kill restart serve
 
 # check we have a couple of dependencies
 dependencies:
 	@command -v fswatch --version >/dev/null 2>&1 || { printf >&2 "fswatch is not installed, please run: brew install fswatch\n"; exit 1; }
 
 # default targets to run when only running `make`
-default: dependencies test
+default: test
+
+codeship_install_go:
+	./codeship_install_go.sh
 
 install:
 	go get -t -v ./...
@@ -19,7 +22,7 @@ clean:
 	go clean
 
 # run formatting tool and build
-build: dependencies clean
+build: clean
 	go fmt
 	go build
 
@@ -40,4 +43,4 @@ restart:
 # will also kill server after ctrl+c
 serve: dependencies
 	@make restart
-	@fswatch -o ./**/*.go tmpl/* | xargs -n1 -I{} make restart || make kill
+	@fswatch -o ./**/*.go tmpl/* | xargs -n1 -I {} make restart || make kill
