@@ -1,12 +1,14 @@
 package utils
 
-import "os"
+import (
+  "os"
+)
 
 func GetEnvVariable(key string, defaultValue string) string {
   var value string
 
-  if os.Getenv("PORT") != "" {
-    value = os.Getenv("PORT")
+  if os.Getenv(key) != "" {
+    value = os.Getenv(key)
   } else {
     value = defaultValue
   }
