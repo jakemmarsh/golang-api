@@ -6,7 +6,7 @@ import (
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
-	"viral-api/utils"
+	"github.com/jakemmarsh/viral-api/utils"
 )
 
 type Ping struct {

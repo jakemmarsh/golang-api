@@ -1,5 +1,12 @@
 package controllers_test
 
 import (
-  "viral-api/test_utils"
+  "testing"
+  "github.com/jakemmarsh/viral-api/test_utils"
 )
+
+func TestArticleController(t *testing.T) {
+  t.Run("Test1", func(t *testing.T) {
+    testutils.Ok(t, nil)
+  })
+}
