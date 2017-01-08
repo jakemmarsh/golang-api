@@ -25,7 +25,7 @@ build: dependencies clean
 
 # run unit tests
 test: dependencies
-	go test -v `go list ./... | grep /test | grep -v test_utils`
+	go test -tags test github.com/jakemmarsh/viral-api/test/...
 
 # attempt to kill running server
 kill:
