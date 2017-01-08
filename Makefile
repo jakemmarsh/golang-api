@@ -2,7 +2,7 @@
 PROGRAM = viral-api
 
 # targets not associated with files
-.PHONY: dependencies default codeship_install_go install clean build test kill restart serve
+.PHONY: dependencies default install clean build test kill restart serve
 
 # check we have a couple of dependencies
 dependencies:
@@ -10,9 +10,6 @@ dependencies:
 
 # default targets to run when only running `make`
 default: test
-
-codeship_install_go:
-	source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/go.sh)"
 
 install:
 	go get -t -v ./...
