@@ -1,4 +1,4 @@
-# viral-api [![Build Status](https://travis-ci.org/jakemmarsh/golang-api.svg?branch=master)](https://travis-ci.org/jakemmarsh/golang-api)
+# golang-api [![Build Status](https://travis-ci.org/jakemmarsh/golang-api.svg?branch=master)](https://travis-ci.org/jakemmarsh/golang-api)
 
 A basic API in Go.
 
