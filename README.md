@@ -1,4 +1,4 @@
-# viral-api [ ![Codeship Status for jakemmarsh/viral-api](https://app.codeship.com/projects/0ad5f7b0-b74b-0134-515a-3617a86d3e20/status?branch=master)](https://app.codeship.com/projects/194500)
+# viral-api [![Build Status](https://travis-ci.org/jakemmarsh/golang-api.svg?branch=master)](https://travis-ci.org/jakemmarsh/golang-api)
 
 A basic API in Go.
 
